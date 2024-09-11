@@ -12,6 +12,9 @@ function NavBar() {
                 <NavLink to='/courses' >Courses</NavLink>
             </li>
             <li>
+                <NavLink to='/productspage' >Product Page</NavLink>
+            </li>
+            <li>
                 <NavLink to='/about-us' >AboutUs</NavLink>
             </li>
         </ul>
