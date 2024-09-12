@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link , useSearchParams } from 'react-router-dom'
 import NavBar from '../components/NavBar'
 
 const products = [
@@ -10,9 +10,22 @@ const products = [
 ]
 
 function ProductPage() {
+
+    const [searchParams , setSearchParams] = useSearchParams();
+    //?sortby=price&order=desc
+    const sortBy = searchParams.get("sortby");
+    const order = searchParams.get("order")
+    console.log({sortBy,order});
+
+
+    const sortHandler = () => {
+        setSearchParams({order :"asc" , sortdby : "sale"  })
+    };
+
   return (
     <div>
         <NavBar/>
+        <button onClick={sortHandler} >asdfasd</button>
         <ul>
             {products.map(product => (
                 <li key={product.id} >
