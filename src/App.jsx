@@ -19,7 +19,10 @@ function App() {
                 <Route  index element={ <HomePage /> } />
                 <Route  path='courses' element={ <Courses /> } />
                 <Route  path='landing' element={ <Navigate to="/" replace /> } />
-                <Route  path='about-us' element={ <AboutUsPage /> } />
+                <Route  path='about-us' element={ <AboutUsPage /> } >
+                    <Route path='program' element={<h1>program</h1>} />
+                    <Route path='ceo' element={<h1>ceo</h1>} />
+                </Route>
                 <Route  path='landingpage' element={ <LandingPage/> } />
                 <Route  path='productspage' element={ <ProductPage /> } />
                 <Route  path='productspage/:id' element={ <ProductDetailPage /> } />
